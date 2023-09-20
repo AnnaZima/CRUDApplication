@@ -1,54 +1,41 @@
 package com.anya.crudapp.model;
 
-import jakarta.persistence.ManyToMany;
+import javax.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "skills")
 public class Skill {
-    int id;
-    String name;
-    @ManyToMany(mappedBy = "skills")
-    List<Developer> developers;
-
-    public Skill(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-      public Skill() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public List<Developer> getDevelopers() {
-        return developers;
-    }
-
-    public void setDevelopers(List<Developer> developers) {
-        this.developers = developers;
-    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    @Column(name = "name")
+    private String name;
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "developers_skills",
+            joinColumns = { @JoinColumn(name = "skills_id") },
+            inverseJoinColumns = { @JoinColumn(name = "developers_id") })
+    private List<Developer> developers;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private Status status;
 
     @Override
     public String toString() {
         return "Skill{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", developers=" + developers +
+                ", developers=" + developers.stream().map(Developer::getId).toList() +
+                ", status=" + status +
                 '}';
     }
 }

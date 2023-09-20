@@ -1,39 +1,25 @@
 package com.anya.crudapp.model;
 
+import javax.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "specialties")
 public class Specialty {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    @Column(name = "name")
+    private String name;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private Status status;
 
-    int id;
-    String name;
 
-    public Specialty(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public Specialty() {
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    @Override
-    public String toString() {
-        return "Specialty{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

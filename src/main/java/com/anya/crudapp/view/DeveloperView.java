@@ -1,7 +1,6 @@
 package com.anya.crudapp.view;
 
 import com.anya.crudapp.controller.DeveloperController;
-import com.anya.crudapp.model.Developer;
 
 import java.util.Scanner;
 
@@ -18,7 +17,8 @@ public class DeveloperView {
     public void getDeveloperById() {
         System.out.println(DEV_ID);
         int id = scanner.nextInt();
-        developerController.getDeveloperById(id);
+        System.out.println(developerController.getDeveloperById(id));
+
     }
 
     public void createDeveloper() {
@@ -37,15 +37,7 @@ public class DeveloperView {
         System.out.println(DEV_ID);
         int id = scanner.nextInt();
         scanner.skip("\n");
-        System.out.println(DEV_NAME);
-        String name = scanner.nextLine();
-        System.out.println(DEV_SURNAME);
-        String surname = scanner.nextLine();
-        System.out.println(DEV_SKILLS);
-        String skills = scanner.nextLine();
-        System.out.println(DEV_SPEC);
-        String specialty = scanner.nextLine();
-        developerController.deleteDeveloper(id, name, surname, skills, specialty);
+        developerController.deleteDeveloper(id);
         System.out.println("Элемент удален");
 
     }
@@ -63,5 +55,10 @@ public class DeveloperView {
         System.out.println(DEV_SPEC);
         String specialty = scanner.nextLine();
         developerController.updateDeveloper(id, name, surname, skills, specialty);
+    }
+
+    public void getAll() {
+        System.out.println("Список всех разработчиков: ");
+        System.out.println(developerController.getAll());
     }
 }

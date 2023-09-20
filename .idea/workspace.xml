@@ -5,37 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eb786d1-92ad-49fe-a8ce-f9d761fe7226" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/controller/DeveloperController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/controller/SkillController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/controller/SpecialtyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Developer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Skill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Specialty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/impl/DeveloperRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/impl/SkillRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/impl/SpecialtyRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/inter/DeveloperRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/inter/GenericRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/inter/SkillRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/inter/SpecialtyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/service/DeveloperService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/service/SkillService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/service/SpecialtyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/util/HibernateSessionFactoryUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/DeveloperView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/SkillView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/SpecialtyView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/submenu/DeveloperMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_1__createTables.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/AppRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/DeveloperRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/SkillRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/SpecialtyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/MainView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/submenu/SkillSubmenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/submenu/SpecialtySubmenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/anya/crudapp/service/DeveloperServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/anya/crudapp/service/SkillServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/anya/crudapp/service/SpecialtyServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/controller/DeveloperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/controller/DeveloperController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/controller/SkillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/controller/SkillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/controller/SpecialtyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/controller/SpecialtyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Specialty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Specialty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/model/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/impl/DeveloperRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/impl/DeveloperRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/impl/SkillRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/impl/SkillRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/impl/SpecialtyRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/impl/SpecialtyRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/inter/DeveloperRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/inter/GenericRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/GenericRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/inter/SkillRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/repository/inter/SpecialtyRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/service/DeveloperService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/service/DeveloperService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/service/SkillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/service/SkillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/service/SpecialtyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/service/SpecialtyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/util/HibernateSessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/util/HibernateSessionFactoryUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/DeveloperView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/DeveloperView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/SkillView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/SkillView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/SpecialtyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/SpecialtyView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/submenu/DeveloperMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anya/crudapp/view/submenu/DeveloperSubmenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1_1__createTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_1__createTables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +51,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -69,9 +74,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Заяц/Downloads/CRUDApplication — копия&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -79,6 +92,88 @@
       <recent name="C:\Users\Заяц\Downloads\CRUDApplication\src\main\resources\db\migration" />
       <recent name="C:\Users\Заяц\Downloads\CRUDApplication\src\main\resources" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.AppRunner">
+    <configuration name="AppRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AppRunner" />
+      <module name="CRUDApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillServiceTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CRUDApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.anya.crudapp.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.anya.crudapp.service" />
+      <option name="MAIN_CLASS_NAME" value="com.anya.crudapp.service.SkillServiceTest" />
+      <option name="METHOD_NAME" value="getById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpecialtyServiceTest.deleteSpecialty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CRUDApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.anya.crudapp.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.anya.crudapp.service" />
+      <option name="MAIN_CLASS_NAME" value="com.anya.crudapp.service.SpecialtyServiceTest" />
+      <option name="METHOD_NAME" value="deleteSpecialty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpecialtyServiceTest.getSpecialtyById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CRUDApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.anya.crudapp.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.anya.crudapp.service" />
+      <option name="MAIN_CLASS_NAME" value="com.anya.crudapp.service.SpecialtyServiceTest" />
+      <option name="METHOD_NAME" value="getSpecialtyById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpecialtyServiceTest.saveSpecialty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CRUDApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.anya.crudapp.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.anya.crudapp.service" />
+      <option name="MAIN_CLASS_NAME" value="com.anya.crudapp.service.SpecialtyServiceTest" />
+      <option name="METHOD_NAME" value="saveSpecialty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AppRunner" />
+        <item itemvalue="JUnit.SpecialtyServiceTest.deleteSpecialty" />
+        <item itemvalue="JUnit.SpecialtyServiceTest.saveSpecialty" />
+        <item itemvalue="JUnit.SpecialtyServiceTest.getSpecialtyById" />
+        <item itemvalue="JUnit.SkillServiceTest.getById" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,5 +196,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.LazyInitializationException" package="org.hibernate" />
+          <option name="timeStamp" value="20" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/anya/crudapp/util/HibernateSessionFactoryUtil.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

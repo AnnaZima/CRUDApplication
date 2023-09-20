@@ -1,77 +1,45 @@
 package com.anya.crudapp.model;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 import java.util.List;
-
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
+@Table(name = "developers")
 public class Developer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column(name = "firstname")
+    private Integer id;
+    @Column(name = "first_name")
     private String firstname;
-    @Column(name = "lastname")
+    @Column(name = "last_name")
     private String lastname;
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
             name = "developers_skills",
             joinColumns = { @JoinColumn(name = "developers_id") },
             inverseJoinColumns = { @JoinColumn(name = "skills_id") })
     private List<Skill> skills;
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "specialty_id")
     private Specialty specialty;
 
-    public Developer(int id, String firstname, String lastname, List<Skill> skills, Specialty specialty) {
-        this.id = id;
+    @Enumerated(EnumType.STRING)
+    @Column (name = "status")
+    private Status status;
+
+    public Developer(String firstname, String lastname, List<Skill> skills, Specialty specialty, Status status) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.skills = skills;
         this.specialty = specialty;
-    }
-
-    public Developer() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public List<Skill> getSkills() {
-        return skills;
-    }
-
-    public void setSkills(List<Skill> skills) {
-        this.skills = skills;
-    }
-
-    public Specialty getSpecialty() {
-        return specialty;
-    }
-
-    public void setSpecialty(Specialty specialty) {
-        this.specialty = specialty;
+        this.status = status;
     }
 
     @Override
@@ -80,8 +48,9 @@ public class Developer {
                 "id=" + id +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
-                ", skills=" + skills +
+                ", skills=" + skills.stream().map(Skill::getName).toList() +
                 ", specialty=" + specialty +
+                ", status=" + status +
                 '}';
     }
 }

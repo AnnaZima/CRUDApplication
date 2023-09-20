@@ -3,6 +3,7 @@ package com.anya.crudapp.controller;
 import com.anya.crudapp.model.Developer;
 import com.anya.crudapp.model.Skill;
 import com.anya.crudapp.model.Specialty;
+import com.anya.crudapp.model.Status;
 import com.anya.crudapp.service.DeveloperService;
 
 import java.util.Arrays;
@@ -13,16 +14,16 @@ public class DeveloperController {
     SkillController skillController = new SkillController();
     SpecialtyController specialtyController = new SpecialtyController();
 
-    private Developer createDeveloperWithId(int id, String name, String surname, String skills, String nameSpecialty) {
+    private Developer createDeveloperWithoutId(String name, String surname, String skills, String nameSpecialty) {
         List<Skill> skillList = Arrays.stream(skills.split(" "))
                 .map(s -> skillController.saveSkill(s)).toList();
         Specialty specialty = specialtyController.saveSpecialty(nameSpecialty);
         Developer developer = new Developer();
-        developer.setId(id);
         developer.setFirstname(name);
         developer.setLastname(surname);
         developer.setSkills(skillList);
         developer.setSpecialty(specialty);
+        developer.setStatus(Status.ACTIVE);
         return developer;
     }
 
@@ -30,25 +31,22 @@ public class DeveloperController {
         return developerController.getDeveloperById(id);
     }
 
-    public Developer saveDeveloper (String name, String surname, String skills, String nameSpecialty) {
-        List<Skill> skillList = Arrays.stream(skills.split(" "))
-                .map(s -> skillController.saveSkill(s)).toList();
-        Specialty specialty = specialtyController.saveSpecialty(nameSpecialty);
-        Developer developer = new Developer();
-        developer.setFirstname(name);
-        developer.setLastname(surname);
-        developer.setSkills(skillList);
-        developer.setSpecialty(specialty);
+    public Developer saveDeveloper(String name, String surname, String skills, String nameSpecialty) {
+        Developer developer = createDeveloperWithoutId(name, surname, skills, nameSpecialty);
         return developerController.saveDeveloper(developer);
     }
-//как правильно удалить большой объект?
-    public void deleteDeveloper(int id, String name, String surname, String skills, String nameSpecialty) {
-        Developer developer = createDeveloperWithId(id, name, surname, skills, nameSpecialty);
-        developerController.deleteDeveloper(developer);
+
+    public void deleteDeveloper(Integer id) {
+        developerController.deleteDeveloper(id);
     }
 
-    public  Developer updateDeveloper(int id, String name, String surname, String skills, String nameSpecialty) {
-       Developer developer = createDeveloperWithId(id, name, surname, skills, nameSpecialty);
+    public Developer updateDeveloper(int id, String name, String surname, String skills, String nameSpecialty) {
+        Developer developer = createDeveloperWithoutId(name, surname, skills, nameSpecialty);
+        developer.setId(id);
         return developerController.updateDeveloper(developer);
+    }
+
+    public List<Developer> getAll() {
+        return developerController.getAll();
     }
 }

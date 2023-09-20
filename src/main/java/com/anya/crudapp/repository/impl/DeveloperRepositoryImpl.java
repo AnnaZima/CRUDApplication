@@ -1,19 +1,21 @@
 package com.anya.crudapp.repository.impl;
 
 import com.anya.crudapp.model.Developer;
-import com.anya.crudapp.repository.inter.DeveloperRepository;
+import com.anya.crudapp.model.Status;
+import com.anya.crudapp.repository.DeveloperRepository;
+import com.anya.crudapp.repository.GenericRepository;
 import com.anya.crudapp.util.HibernateSessionFactoryUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import java.util.List;
 
 public class DeveloperRepositoryImpl implements DeveloperRepository {
     @Override
     public Developer getById(Integer id) {
         Developer developer;
         try (Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
-            Transaction transaction = session.beginTransaction();
             developer = session.get(Developer.class, id);
-            transaction.commit();
         }
         return developer;
     }
@@ -32,10 +34,12 @@ public class DeveloperRepositoryImpl implements DeveloperRepository {
     }
 
     @Override
-    public void delete(Developer developer) {
+    public void delete(Integer id) {
         try (Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
-            session.remove(developer);
+            Developer developer = session.find(Developer.class, id);
+            developer.setStatus(Status.DELETE);
+            session.merge(developer);
             transaction.commit();
         }
 
@@ -46,9 +50,17 @@ public class DeveloperRepositoryImpl implements DeveloperRepository {
         Developer updatedDeveloper;
         try (Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
-            updatedDeveloper = session.merge(developer);
+            updatedDeveloper = (Developer)session.merge(developer);
             transaction.commit();
         }
         return updatedDeveloper;
+    }
+
+    @Override
+    public List<Developer> getAll() {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        List<Developer> from_developer =  (List<Developer>)session.createQuery("From Developer").getResultList();
+        session.close();
+        return from_developer;
     }
 }
